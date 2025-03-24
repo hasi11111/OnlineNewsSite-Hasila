@@ -274,6 +274,7 @@ uri('/', 'App\Home', 'index');
 uri('home', 'App\Home', 'index');
 uri('show-post/{id}', 'App\Home', 'show');
 uri('show-category/{id}', 'App\Home', 'category');
+uri('about', 'App\Home', 'about');
 uri('comment-store', 'App\Home', 'commentStore', 'POST');
 
 echo '404 - not found';

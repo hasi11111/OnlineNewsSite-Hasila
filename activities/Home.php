@@ -31,6 +31,15 @@ class Home{
                 require_once (BASE_PATH . '/template/app/index.php');
         }
 
+        public function about() {
+                $db = new DataBase();
+
+                $setting = $db->select('SELECT * FROM websetting')->fetch();
+
+                $menus = $db->select('SELECT * FROM menus WHERE parent_id IS NULL')->fetchAll();
+                $popularPosts =$db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username, (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts  ORDER BY view DESC LIMIT 0, 3')->fetchAll();
+                require_once BASE_PATH . '/template/app/about.php';
+            }
 
         public function show($id)
         {
