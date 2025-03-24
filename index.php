@@ -17,8 +17,8 @@ define('DISPLAY_ERROR', true);
 //mail config
 define('MAIL_HOST', 'sandbox.smtp.mailtrap.io');
 define('SMTP_AUTH', 'LOGIN');
-define('MAIL_USERNAME', 'yourMailUsername');
-define('MAIL_PASSWORD', 'yourMailPassword');
+define('MAIL_USERNAME', '7ab756b555e04c');
+define('MAIL_PASSWORD', 'd9c47897054131');
 define('MAIL_PORT', 587);
 define('SENDER_MAIL', 'onlinenewssite@admin.com');
 define('SENDER_NAME', 'admin');
